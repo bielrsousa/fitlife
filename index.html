@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fit Life P Norte – Academia em Ceilândia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#101319;--line:#232833;--ink:#f2f4f8;--mute:#9aa3b5;--blue:#2f5bff;--blue2:#5b82ff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Barlow,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--blue2);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:800;line-height:.95;margin:0;letter-spacing:-.01em}
+header{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 28px "Barlow Condensed",sans-serif;color:var(--blue2)}
+.logo small{font:500 15px Barlow,sans-serif;color:var(--mute);margin-left:10px}
+nav{display:flex;gap:22px;align-items:center;font-weight:500}
+nav a:not(.btn){color:var(--mute)}nav a:not(.btn):hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--blue);color:#fff;font-weight:600;padding:12px 22px;border-radius:6px;border:0;font-size:inherit;font-family:inherit;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--blue2)}
+.btn.ghost{background:none;border:2px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--blue2)}
+.hero{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(64px,14vw,168px);max-width:9ch}
+.hero h1 span{color:var(--blue2)}
+.hero p{max-width:46ch;color:var(--mute);font-size:20px;margin:28px 0 34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+section{padding:80px 0}
+h2{font-size:clamp(40px,7vw,64px);margin-bottom:12px}
+h3.sec{font-size:34px;margin:48px 0 16px}
+.lead{color:var(--mute);margin:0 0 36px;max-width:56ch}
+.plan{display:grid;grid-template-columns:1.3fr 1fr 1fr auto;gap:18px 28px;align-items:center;padding:24px;border-top:1px solid var(--line)}
+.plan:last-child{border-bottom:1px solid var(--line)}
+.plan h3{font-size:28px}
+.tag{display:inline-block;margin-top:6px;font-size:14px;color:var(--mute)}
+.plan.best{background:var(--panel);border-left:4px solid var(--blue);border-top-color:transparent}
+.plan.best .tag{color:var(--blue2);font-weight:600}
+.price{font:800 50px/1 "Barlow Condensed",sans-serif}
+.price small{font:500 16px Barlow,sans-serif;color:var(--mute);margin-left:4px}
+.sub{color:var(--mute);font-size:15px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tabs button{background:none;border:2px solid var(--line);color:var(--mute);padding:9px 18px;border-radius:6px;font:600 16px Barlow,sans-serif;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.classes{list-style:none;margin:0;padding:0;max-width:560px}
+.classes li{display:flex;gap:24px;align-items:baseline;padding:14px 0;border-top:1px solid var(--line);font-size:20px}
+.classes li:last-child{border-bottom:1px solid var(--line)}
+.classes b{font:800 30px "Barlow Condensed",sans-serif;color:var(--blue2);min-width:84px}
+.swim{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:16px}
+th{font:800 22px "Barlow Condensed",sans-serif;text-align:left;padding:10px 12px;background:var(--panel);border-bottom:2px solid var(--blue)}
+td{padding:9px 12px;border-bottom:1px solid var(--line)}
+td:first-child{font-weight:600;white-space:nowrap;width:1%}
+td span{color:var(--mute)}
+.fees{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:44px}
+.fee{background:var(--panel);border-left:4px solid var(--blue);padding:24px}
+.fee h3{font-size:30px;margin-bottom:14px}
+.fee p{display:flex;justify-content:space-between;gap:16px;margin:0;padding:10px 0;border-top:1px solid var(--line)}
+.fee p b{font:800 26px/1 "Barlow Condensed",sans-serif}
+.fee small{display:block;color:var(--mute);font-size:14px}
+.loc{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.loc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.loc dl{margin:0}.loc dt{color:var(--mute);font-size:15px;margin-top:20px}.loc dt:first-child{margin-top:0}.loc dd{margin:2px 0 0;font-size:19px}
+.final{text-align:center}
+.final h2{font-size:clamp(48px,10vw,110px);margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:820px){
+ nav a:not(.btn){display:none}
+ .plan{grid-template-columns:1fr 1fr;padding:22px 16px}
+ .plan>div:first-child,.plan .btn{grid-column:1/-1}
+ .plan .btn{text-align:center}
+ .swim,.fees,.loc .wrap{grid-template-columns:1fr}
+ .hero{padding-top:56px}
+}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:in .7s ease-out both}@keyframes in{from{opacity:0;transform:translateY(24px)}}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="logo" href="#top">FIT LIFE<small>P Norte</small></a>
+ <nav><a href="#planos">Planos</a><a href="#aulas">Aulas</a><a href="#natacao">Natação</a><a href="#onde">Horários</a><a class="btn" href="#planos">Matricule-se</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+ <h1>Treino que cabe na sua <span>vida.</span></h1>
+ <p>Musculação, aulas coletivas e natação em Ceilândia. Planos a partir de R$ 99,90 por mês e diária de R$ 20.</p>
+ <div class="cta"><a class="btn" href="#planos">Ver planos</a><a class="btn ghost" href="#onde">Horários e endereço</a></div>
+</div></div>
+
+<section id="planos"><div class="wrap">
+ <h2>Planos da academia</h2>
+ <p class="lead">Quanto maior o plano, menor a mensalidade. Parcele no cartão ou pague à vista.</p>
+ <div class="plan best"><div><h3>Plano Fit Black – Anual</h3><span class="tag">Menor mensalidade para adultos</span></div><div class="price">R$ 99,90<small>/mês</small></div><div class="sub">12x de R$ 99,90<br>R$ 1.198,80 no total</div><a class="btn" href="#onde">Eu quero</a></div>
+ <div class="plan"><div><h3>Plano Six Fit – Semestral</h3><span class="tag">6 meses</span></div><div class="price">R$ 114,90<small>/mês</small></div><div class="sub">6x de R$ 114,90<br>R$ 689,40 no total</div><a class="btn ghost" href="#onde">Eu quero</a></div>
+ <div class="plan"><div><h3>Fit Gold – Mensal</h3><span class="tag">Sem fidelidade longa</span></div><div class="price">R$ 129,00<small>/mês</small></div><div class="sub">1x de R$ 129,00<br>à vista</div><a class="btn ghost" href="#onde">Eu quero</a></div>
+ <div class="plan"><div><h3>Fit Teens – 6 meses recorrente</h3><span class="tag">Plano para adolescentes</span></div><div class="price">R$ 69,90<small>/mês</small></div><div class="sub">Cobrança recorrente<br>R$ 419,40 em 6x</div><a class="btn ghost" href="#onde">Eu quero</a></div>
+ <div class="plan"><div><h3>Fit Teens – 6 meses não recorrente</h3><span class="tag">Plano para adolescentes</span></div><div class="price">R$ 419,40</div><div class="sub">1x à vista<br>pagamento único</div><a class="btn ghost" href="#onde">Eu quero</a></div>
+ <div class="plan"><div><h3>Diária (Fit)</h3><span class="tag">Treine um dia sem plano</span></div><div class="price">R$ 20,00</div><div class="sub">1x à vista</div><a class="btn ghost" href="#onde">Eu quero</a></div>
+</div></section>
+
+<section id="aulas" style="padding-top:0"><div class="wrap">
+ <h2>Aulas coletivas</h2>
+ <p class="lead">Incluídas no seu plano. Escolha o dia para ver os horários.</p>
+ <div class="tabs" role="tablist" id="tabs"></div>
+ <ul class="classes" id="classes"></ul>
+</div></section>
+
+<section id="natacao" style="padding-top:0"><div class="wrap">
+ <h2>Natação e hidroginástica</h2>
+ <p class="lead">Turmas para bebês, crianças, adultos e hidro. Escolha 3 dias ou 2 dias por semana.</p>
+ <div class="swim">
+  <div><h3 class="sec" style="margin-top:0">Segunda, quarta e sexta</h3><div class="scroll"><table id="t3"></table></div></div>
+  <div><h3 class="sec" style="margin-top:0">Terça e quinta</h3><div class="scroll"><table id="t2"></table></div></div>
+ </div>
+ <div class="fees">
+  <div class="fee"><h3>3x por semana</h3><small>Segunda, quarta e sexta</small>
+   <p><span>Mensal</span><b>R$ 189,00</b></p>
+   <p><span>Trimestral<small>3x de R$ 174,00</small></span><b>R$ 522,00</b></p>
+   <p><span>Semestral<small>6x de R$ 164,00</small></span><b>R$ 984,00</b></p></div>
+  <div class="fee"><h3>2x por semana</h3><small>Terça e quinta</small>
+   <p><span>Mensal</span><b>R$ 169,00</b></p>
+   <p><span>Trimestral<small>3x de R$ 154,00</small></span><b>R$ 462,00</b></p>
+   <p><span>Semestral<small>6x de R$ 144,00</small></span><b>R$ 864,00</b></p></div>
+ </div>
+</div></section>
+
+<section class="loc" id="onde"><div class="wrap">
+ <div>
+  <h2>Venha treinar</h2>
+  <p class="lead" style="margin:0">Fica na QNP 09, em Ceilândia. Fale com a equipe pelo e-mail ou pelo Instagram.</p>
+  <p style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href="mailto:fitlifefilial@gmail.com">Falar com a academia</a><a class="btn ghost" href="https://instagram.com/fitlifepnorte">@fitlifepnorte</a></p>
+ </div>
+ <dl>
+  <dt>Horário de funcionamento</dt>
+  <dd>Segunda a sexta: 6h às 23h<br>Sábado e feriado: 8h às 14h<br>Domingo: 9h às 14h</dd>
+  <dt>Endereço</dt><dd>QNP 09 Conjunto X, 24 e 25<br>Ceilândia – Distrito Federal<br>CEP 72240-823</dd>
+  <dt>E-mail</dt><dd><a href="mailto:fitlifefilial@gmail.com">fitlifefilial@gmail.com</a></dd>
+ </dl>
+</div></section>
+
+<section class="final"><div class="wrap">
+ <h2>Comece hoje.</h2>
+ <a class="btn" href="#planos">Escolher meu plano</a>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>Fit Life – P Norte</span><span>CNPJ 46.961.683/0002-25</span></div></footer>
+
+<script>
+var A={
+ "Segunda":[["8h","Spinning"],["8h45","Funcional"],["18h45","Abdominal"],["19h","Pilates"],["19h30","Jump"]],
+ "Terça":[["8h","Pilates"],["8h45","Jump"],["19h","Spinning"],["19h45","Funcional"],["20h30","FitDance"]],
+ "Quarta":null,
+ "Quinta":[["8h","Pilates"],["8h45","Jump"],["19h","Spinning"],["19h45","Funcional"],["20h30","FitDance"]],
+ "Sexta":null
+};
+var tabs=document.getElementById("tabs"),list=document.getElementById("classes");
+function show(d){
+ Array.prototype.forEach.call(tabs.children,function(b){b.setAttribute("aria-selected",b.textContent===d)});
+ var r=A[d];
+ list.innerHTML=r?r.map(function(x){return "<li><b>"+x[0]+"</b>"+x[1]+"</li>"}).join(""):"<li>Horários deste dia em breve. Consulte a recepção.</li>";
+}
+Object.keys(A).forEach(function(d){
+ var b=document.createElement("button");b.textContent=d;b.setAttribute("role","tab");
+ b.onclick=function(){show(d)};tabs.appendChild(b);
+});
+show("Segunda");
+
+var N=[["6h30","Hidro"],["7h30","Hidro"],["8h30","Aprimoramento","9 a 14 anos"],["9h30","Adaptação","6 a 8 anos"],["10h30","Iniciação","3 a 5 anos"],["14h","Adaptação","6 a 8 anos"],["15h","Iniciação","3 a 5 anos"],["16h","Aprimoramento","9 a 14 anos"],["17h","Hidro"],["18h","Hidro"],["19h","Iniciação","3 a 5 anos"],["20h","Adaptação","6 a 8 anos"],["21h","Adulto"]];
+var M=[["6h30","Hidro"],["7h30","Hidro"],["8h30","Adaptação","6 a 8 anos"],["9h30","Iniciação","3 a 5 anos"],["10h30","Bebê","6 meses a 3 anos"],["11h10","Bebê","6 meses a 3 anos"],["14h","Adaptação","6 a 8 anos"],["15h","Aprimoramento","9 a 14 anos"],["16h","Bebê","6 meses a 3 anos"],["16h35","Bebê","6 meses a 3 anos"],["17h10","Hidro"],["18h05","Iniciação","3 a 5 anos"],["19h","Adaptação","6 a 8 anos"],["20h","Hidro"],["21h","Adulto"]];
+function tb(id,d){document.getElementById(id).innerHTML="<tr><th>Horário</th><th>Turma</th></tr>"+d.map(function(x){return "<tr><td>"+x[0]+"</td><td>"+x[1]+(x[2]?" <span>("+x[2]+")</span>":"")+"</td></tr>"}).join("")}
+tb("t3",N);tb("t2",M);
+</script>
+</body>
+</html>
